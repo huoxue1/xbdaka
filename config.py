@@ -35,7 +35,7 @@ class Config:
         ),
     ]
     # 微信推送的token，可前往pushplus官网获取 https://www.pushplus.plus/push1.html
-    PUSH_PLUS_TOKEN = "7424a35e9af748608ae7d81b62481a8e"
+    PUSH_PLUS_TOKEN = ""
 
     # 打卡时间，默认7点过2分
     HOUR = 7
