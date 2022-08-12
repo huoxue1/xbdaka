@@ -15,14 +15,24 @@ class Config:
     datas = [
         Student(
             # 打卡用户姓名
-            name="苟江山",
+            name="张三",
             # 用户小北学生账号
-            account="15082717021",
+            account="123",
             # 用户小北学生密码
-            password="164652",
+            password="123",
             # 用户打卡地点
             location="四川省-成都市-金堂县"
-        )
+        ),
+        Student(
+            # 打卡用户姓名
+            name="李四",
+            # 用户小北学生账号
+            account="123",
+            # 用户小北学生密码
+            password="123",
+            # 用户打卡地点
+            location="四川省-成都市-金堂县"
+        ),
     ]
     # 微信推送的token，可前往pushplus官网获取 https://www.pushplus.plus/push1.html
     PUSH_PLUS_TOKEN = "7424a35e9af748608ae7d81b62481a8e"

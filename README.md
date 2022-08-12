@@ -1,9 +1,9 @@
 # 小北打卡
 
-## 安装
-+ 下载源代码
-+ 修改Config.py当中的配置项
-+ 执行```python login.py```
+## 运行
++ fork该仓库，在仓库设置中将仓库转为私有仓库
++ 编辑仓库中的config.py文件为自己的账号信息，若只有一个用户删除多余的student对象计科，若需要推送消息，可访问pusplus官网获取token配送
++ 在action中启用workflow,为自己仓库点击star可测试工作流程是否正常
 
 
 

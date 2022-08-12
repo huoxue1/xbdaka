@@ -3,7 +3,7 @@ name: CI
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: '30 5,17 * * *'
+    - cron: '2 7 * * *'
   watch:
     types:
       - started
