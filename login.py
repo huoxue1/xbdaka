@@ -12,7 +12,6 @@ try:
 except ImportError as e:
     print("导入三方库失败 ==>"+e.msg)
     print("请尝试使用pip安装后执行")
-    time.sleep(3000)
     exit(3)
 
 urllib3.disable_warnings()

@@ -19,6 +19,6 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - run: python login.py
+      - run: pip3 install requests && pip3 install colorama && python3 login.py
 
 
