@@ -3,7 +3,7 @@ import time
 from config import Config
 import base64
 import json
-from apscheduler.schedulers.blocking import BlockingScheduler
+
 
 try:
     import requests
@@ -50,6 +50,7 @@ def healthy(client1: requests.Session, local: str, token: str) -> str:
     client1.get("https://xiaobei.yinghuaonline.com/xiaobei-api/student/health/checkHealth", headers=headers).json()
     location = client1.get("https://xiaobei.yinghuaonline.com/xiaobei-api/student/healthLocation",
                            headers=headers).json()
+
     # 提交打卡信息，返回内容 {"code":200,"msg":"操作成功"}为打卡成功
     data = client1.post("https://xiaobei.yinghuaonline.com/xiaobei-api/student/health", headers=headers, json={
         "temperature": "36.8", "coordinates": location.get("data").get("coordinates"),
@@ -128,9 +129,11 @@ def main():
 if __name__ == '__main__':
     init(autoreset=True)
     print('*' * 20)
-    print(Bcolors.OKBLUE + "软件作者：gjs")
     print(Bcolors.OKBLUE + "该脚本仅用于成都文理学院自动打卡，不做任何盈利行为")
     print('*' * 20)
-    scheduler = BlockingScheduler()
-    scheduler.add_job(main, "cron", hour=Config.HOUR, minute=Config.MINUTE, timezone="Asia/Shanghai")
-    scheduler.start()
+    # if len(sys.argv) > 1:
+    main()
+    # else:
+    #     scheduler = BlockingScheduler()
+    #     scheduler.add_job(main, "cron", hour=Config.HOUR, minute=Config.MINUTE, timezone="Asia/Shanghai")
+    #     scheduler.start()

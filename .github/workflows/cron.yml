@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: '30 5,17 * * *'
+  watch:
+    types:
+      - started
+
+
+
+jobs:
+  build:
+    name: Build binary CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - run: python login.py
+
+
