@@ -1,0 +1,6 @@
+*.exe
+.idea/
+*.png
+/logs/
+*.log
+__pycache__
